@@ -220,9 +220,9 @@ class inkthemes_Customizer {
 
         $wp_customize->add_section('home_page_slider_3', array(
 
-            'title' => __('Second Slider', 'colorway'),
+            'title' => __('Third Slider', 'colorway'),
 
-            'description' => __('Allows you to setup second slider for ColorWay Theme.', 'colorway'), //Descriptive tooltip
+            'description' => __('Allows you to setup third slider for ColorWay Theme.', 'colorway'), //Descriptive tooltip
 
             'panel' => 'home_page_slider_panel',
 
@@ -693,9 +693,6 @@ class inkthemes_Customizer {
 
 
     public static function inkthemes_Section_Content() {
-
-
-
         $section_content = array(
 
             'logo_fevi_setting' => array(
@@ -739,6 +736,18 @@ class inkthemes_Customizer {
                 'colorway_slidedescription2',
 
                 'colorway_slidelink2'
+
+            ),
+
+            'home_page_slider_3' => array(
+
+                'colorway_slideimage3',
+
+                'colorway_slideheading3',
+
+                'colorway_slidedescription3',
+
+                'colorway_slidelink3'
 
             ),
 
@@ -1119,9 +1128,9 @@ class inkthemes_Customizer {
 
                 'id' => 'inkthemes_options[colorway_slideimage3]',
 
-                'label' => __('Second Slider Image', 'colorway'),
+                'label' => __('Third Slider Image', 'colorway'),
 
-                'description' => __('Choose Image for your Home page Second Slider. Optimal Size: 1171px x 526px', 'colorway'),
+                'description' => __('Choose Image for your Home page Third Slider. Optimal Size: 1171px x 526px', 'colorway'),
 
                 'type' => 'option',
 
@@ -1135,9 +1144,9 @@ class inkthemes_Customizer {
 
                 'id' => 'inkthemes_options[colorway_slideheading3]',
 
-                'label' => __('Second Slider Heading', 'colorway'),
+                'label' => __('Third Slider Heading', 'colorway'),
 
-                'description' => __('Enter the Heading for Home page Second slider', 'colorway'),
+                'description' => __('Enter the Heading for Home page Third slider', 'colorway'),
 
                 'type' => 'option',
 
@@ -1151,9 +1160,9 @@ class inkthemes_Customizer {
 
                 'id' => 'inkthemes_options[colorway_slidelink3]',
 
-                'label' => __('Second Slide Link', 'colorway'),
+                'label' => __('Third Slide Link', 'colorway'),
 
-                'description' => __('Enter the Link URL for Home Page Second Slider', 'colorway'),
+                'description' => __('Enter the Link URL for Home Page Third Slider', 'colorway'),
 
                 'type' => 'option',
 
@@ -1169,7 +1178,7 @@ class inkthemes_Customizer {
 
                 'label' => __('Seocnd Slide Description', 'colorway'),
 
-                'description' => __('Enter the Description for Home Page Second Slider', 'colorway'),
+                'description' => __('Enter the Description for Home Page Third Slider', 'colorway'),
 
                 'type' => 'option',
 
