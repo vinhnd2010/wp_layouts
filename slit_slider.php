@@ -20,10 +20,10 @@
           ),
 
           'slider3' => array(
-            'img' => inkthemes_get_option( 'colorway_slideimage2' ),
-            'heading' => inkthemes_get_option( 'colorway_slideheading2' ),
-            'link' => inkthemes_get_option( 'colorway_slidelink2' ),
-            'desc' => inkthemes_get_option( 'colorway_slidedescription2' ),
+            'img' => inkthemes_get_option( 'colorway_slideimage3' ),
+            'heading' => inkthemes_get_option( 'colorway_slideheading3' ),
+            'link' => inkthemes_get_option( 'colorway_slidelink3' ),
+            'desc' => inkthemes_get_option( 'colorway_slidedescription3' ),
           ),
         );
 
@@ -109,9 +109,7 @@
         }
 
         // Note our use of ===.  Simply == would not work as expected
-
         // because the position of 'a' was the 0th (first) character.
-
         ?>
 
         <?php if ( $check_img_ofset == 0 && $sliders['slider2']['img'] != '' ) { ?>
@@ -151,7 +149,6 @@
         }
 
         //The strpos funtion is comparing the strings to allow uploading of the Videos & Images in the Slider
-
         $check_img_ofset = 0;
 
         foreach ( $value_img as $get_value ) {
@@ -161,9 +158,7 @@
         }
 
         // Note our use of ===.  Simply == would not work as expected
-
         // because the position of 'a' was the 0th (first) character.
-
         ?>
 
         <?php if ( $check_img_ofset == 0 && $sliders['slider3']['img'] != '' ) { ?>
