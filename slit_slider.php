@@ -25,11 +25,19 @@
             'link' => inkthemes_get_option( 'colorway_slidelink3' ),
             'desc' => inkthemes_get_option( 'colorway_slidedescription3' ),
           ),
+
+          'slider4' => array(
+            'img' => inkthemes_get_option( 'colorway_slideimage4'),
+            'heading' => inkthemes_get_option( 'colorway_slideheading4'),
+            'link' => inkthemes_get_option( 'colorway_slidelink4'),
+            'desc' => inkthemes_get_option( 'colorway_slidedescription4' ),
+          ),
         );
 
         $slider1 = $sliders['slider1']['img'];
         $slider2 = $sliders['slider2']['img'];
         $slider3 = $sliders['slider3']['img'];
+        $slider4 = $sliders['slider4']['img'];
 
         $value_img = array( '.jpg', '.png', '.jpeg', '.gif', '.bmp', '.tiff', '.tif' );
 
@@ -181,6 +189,56 @@
       </div>
     <?php } ?>
 
+    <!-- START slider 4 -->
+    <?php if ( $sliders['slider4']['img'] != '' ) { ?>
+      <div class="sl-slide slide4" data-orientation="vertical" data-slice1-rotation="10" data-slice2-rotation="-15" data-slice1-scale="1.5" data-slice2-scale="1.5">
+        <?php if ( $sliders['slider4']['heading'] != '' ) { ?>
+          <div class="sl-slide-inner">
+            <div class="salesdetails">
+              <?php if ( $sliders['slider4']['heading'] != '' ) { ?>
+                <h1><a href="<?php echo $sliders['slider4']['link']; ?>"><?php echo $sliders['slider4']['heading']; ?></a></h1>
+              <?php } ?>
+              <?php if ( $sliders['slider4']['desc'] != '' ) { ?>
+                <p><?php echo $sliders['slider4']['desc']; ?></p>
+              <?php } ?>
+            </div>
+          </div>
+          <?php
+        }
+
+        //The strpos funtion is comparing the strings to allow uploading of the Videos & Images in the Slider
+        $check_img_ofset = 0;
+
+        foreach ( $value_img as $get_value ) {
+          if ( preg_match( "/$get_value/", $sliders['slider4']['img'] ) ) {
+            $check_img_ofset = 1;
+          }
+        }
+
+        // Note our use of ===.  Simply == would not work as expected
+        // because the position of 'a' was the 0th (first) character.
+        ?>
+
+        <?php if ( $check_img_ofset == 0 && $sliders['slider4']['img'] != '' ) { ?>
+          <div class="bg-img bg-img-4"><?php echo $sliders['slider4']['img']; ?></div>
+        <?php } else { ?>
+          <div class="bg-img bg-img-4">
+            <?php if ( $sliders['slider4']['img'] != '' ) { ?>
+              <a href="<?php echo $sliders['slider4']['link']; ?>" >
+                <img  src="<?php echo $sliders['slider4']['img']; ?>" alt="<?php echo $sliders['slider4']['heading']; ?>"/></a>
+            <?php } ?>
+          </div>
+        <?php } ?>
+      </div>
+
+    <?php } elseif ( $sliders['slider4']['img'] == '' ) { ?>
+      <div class="sl-slide slide4" data-orientation="vertical" data-slice1-rotation="10" data-slice2-rotation="-15" data-slice1-scale="1.5" data-slice2-scale="1.5">
+        <div class="bg-img bg-img-4">
+          <img  src="<?php echo get_template_directory_uri(); ?>/images/slider4.jpg" alt="Slide Image 1"/>
+        </div>
+      </div>
+    <?php } ?>
+    <!-- END slider 4 -->
 
   </div><!-- /sl-slider -->
 
@@ -194,6 +252,7 @@
       <span class="nav-dot-current"></span>
       <span class="slide2"></span>
       <span class="slide3"></span>
+      <span class="slide4"></span>
     </nav>
   <?php } ?>
 </div>
