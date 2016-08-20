@@ -234,6 +234,15 @@ class inkthemes_Customizer {
 
         );
 
+        $wp_customize->add_section('home_page_slider_4', array(
+          'title' => __('Fourth Slider', 'colorway'),
+          'description' => __('Allows you to setup fourth slider for ColorWay Theme.', 'colorway'), //Descriptive tooltip
+          'panel' => 'home_page_slider_panel',
+          'priority' => '',
+          'capability' => 'edit_theme_options'
+          )
+        );
+
 
 
         /**
@@ -751,6 +760,13 @@ class inkthemes_Customizer {
 
             ),
 
+            'home_page_slider_4' => array(
+              'colorway_slideimage4',
+              'colorway_slideheading4',
+              'colorway_slidedescription4',
+              'colorway_slidelink4'
+            ),
+
             'home_page_main_heading' => array(
 
                 'inkthemes_mainheading'
@@ -1176,7 +1192,7 @@ class inkthemes_Customizer {
 
                 'id' => 'inkthemes_options[colorway_slidedescription3]',
 
-                'label' => __('Seocnd Slide Description', 'colorway'),
+                'label' => __('Third Slide Description', 'colorway'),
 
                 'description' => __('Enter the Description for Home Page Third Slider', 'colorway'),
 
@@ -1188,6 +1204,48 @@ class inkthemes_Customizer {
 
             ),
 
+            'colorway_slideimage4' => array(
+              'id' => 'inkthemes_options[colorway_slideimage4]',
+              'label' => __('Fourth Slider Image', 'colorway'),
+              'description' => __('Choose Image for your Home page Fourth Slider. Optimal Size: 1171px x 526px', 'colorway'),
+              'type' => 'option',
+              'setting_type' => 'image',
+              'default' => ''
+            ),
+
+            'colorway_slideheading4' => array(
+              'id' => 'inkthemes_options[colorway_slideheading4]',
+              'label' => __('Fourth Slider Heading', 'colorway'),
+              'description' => __('Enter the Heading for Home page Fourth slider', 'colorway'),
+              'type' => 'option',
+              'setting_type' => 'textarea',
+              'default' => ''
+            ),
+
+            'colorway_slidelink4' => array(
+              'id' => 'inkthemes_options[colorway_slidelink4]',
+              'label' => __('Fourth Slide Link', 'colorway'),
+              'description' => __('Enter the Link URL for Home Page Fourth Slider', 'colorway'),
+              'type' => 'option',
+              'setting_type' => 'link',
+              'default' => ''
+            ),
+
+            'colorway_slidedescription4' => array(
+
+                'id' => 'inkthemes_options[colorway_slidedescription4]',
+
+                'label' => __('Fourth Slide Description', 'colorway'),
+
+                'description' => __('Enter the Description for Home Page Fourth Slider', 'colorway'),
+
+                'type' => 'option',
+
+                'setting_type' => 'textarea',
+
+                'default' => ''
+
+            ),
 
             'inkthemes_mainheading' => array(
 
